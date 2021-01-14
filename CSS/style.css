@@ -1,0 +1,432 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+:root {
+    --ff-titles: 'Jura';
+    --ff-body: helvetica, sans-serif;
+    --fs-body: 16px;
+    --fw-body: 300;
+
+    --main-bg-color1: #363075;
+    --main-bg-color2: #131036;
+    --alt-bg-color1: #968b99;
+    --alt-bg-color2: #766d78;
+  }
+
+  /* html {
+    scroll-behavior: smooth;
+  } */
+  
+  body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-weight: var(--fw-body);
+  }
+
+  img {
+      display: block;
+      max-width: 100%;
+  }
+
+  h1,
+  h2,
+  h3 {
+      line-height: 1.1;
+      font-family: var(--ff-titles);
+      text-transform: uppercase;
+  }
+
+  /* Typography */
+
+  .section-title {
+      font-size: 2.5rem;
+      font-weight: 200;
+      color: white;
+      text-shadow: 0px 0px 15px dodgerblue, 0px 0px 2px dodgerblue;
+      text-align: center;
+  }
+
+  /*
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 15rem;
+    height: 2px;
+    margin: 0.5em auto 1em;
+    background: white;
+    opacity: 0.5;
+  } */
+  
+  /* Main Nav */
+ 
+  .header {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+  }
+
+  .nav {
+    position: fixed;
+    background: linear-gradient(60deg, rgba(54, 48, 117, 0.8) 0%, rgba(19, 16, 54, 0.8) 100%), url(/Files/img/ibolat-tokyo_street-unsplash.jpg) no-repeat top center;
+    color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+  }
+
+  .nav-list {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-family: var(--ff-titles);
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 0.25em;
+  }
+
+  .nav-link:hover {
+    text-shadow: 0px 0px 8px #d55df0;
+    border-left: 1px solid #d55df0;
+    color: #d55df0;
+    transition: 150ms;
+  }
+
+  .nav-toggle {
+    background: transparent;
+    padding: .5em;
+    border: 0;
+    cursor: pointer;
+    position: fixed;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+  }
+
+  .nav-open .nav{
+    transform: translateX(0);
+  }
+
+  .nav-open .nav-toggle {
+    position: fixed;
+  }
+
+  .nav-open .hamburger {
+    transform: rotate(.625turn);
+  }
+
+  .nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+  }
+
+  .nav-open .hamburger::after {
+    opacity: 0;
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+  }
+
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    background: white;
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .hamburger::before {top: 6px;}
+  .hamburger::after {bottom: 6px;}
+
+  
+  /* Welcome Section */
+
+  .welcome-section {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #000;
+    background: linear-gradient(60deg, rgba(54, 48, 117, 0.75) 0%, rgba(19, 16, 54, 0.75) 100%), url(/Files/img/andre-benz-tokyo_skyline-unsplash.jpg) no-repeat top center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Jura', sans-serif;
+    padding-top: 25px;
+  }
+  
+  /* In the circle */
+  .welcome-central {
+    height: 500px;
+    width: 500px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-left: 45px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: 1.5s;
+  }
+  
+  .welcome-central:hover {
+    box-shadow: 0 0 15px white inset, 0 0 15px white;
+    transition: 0.5s;
+  }
+  
+  .welcome-central h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    transition: 3.0s;
+  }
+  
+  .welcome-central h1:hover {
+    text-shadow: 0px 0px 15px dodgerblue;
+    transition: 0.3s;
+  }
+  
+  .welcome-central p {
+    margin-top: -25px;
+  }
+  
+  .profile-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+  }
+  
+  .profile-link {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 1.3s;
+  }
+  
+  .profile-link:hover {
+    color: #e48df7;
+    text-shadow: 0px 0px 10px white, 0px 0px 7px white;
+    transition: 0.3s;
+  }
+  
+  .link-text {
+    font-size: 0.75rem;
+    padding: 5px;
+  }
+  
+  @media (max-width: 975px) {
+    .welcome-central {
+      height: 475px;
+      width: 475px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .welcome-central {
+      height: 375px;
+      width: 375px;
+    }
+    
+    .link-text {
+      display: none;
+    }
+  }
+
+
+  /* Services Section */
+
+  .services-section {
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--main-bg-color1);
+  }
+
+
+  .services {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 25px;
+      margin: 25px;
+  }
+
+  .service {
+      max-width: 400px;
+      margin: 0 auto;
+  }
+
+  .service + .service {
+      margin-left: 2rem;
+  }
+
+.service-title {
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+.services {
+      flex-direction: column;
+}
+}
+
+/*
+.service-title::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: white;
+    opacity: 0.25;
+} */
+
+  /* About Section */
+  
+  #about {
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--alt-bg-color1);
+  }
+  
+  .alt-section-box {
+    background-color: var(--alt-bg-color2);
+    padding: 25px;
+    margin: 125px 25px 100px 25px;
+  }
+  
+  .alt-section-text {
+    color: white;
+    text-align: center;
+  }
+  
+  .top-btn {
+    color: gold;
+    text-decoration: none;
+    border: 1px solid gold;
+    padding: 6px;
+    border-radius: 7px;
+    transition: 0.3s;
+  }
+  
+  .top-btn:hover {
+    box-shadow: 0px 0px 5px gold, 0px 0px 5px gold inset;
+    text-shadow: 0px 0px 2px gold;
+    transition: 0.3s;
+  }
+
+
+  /* Projects Section */
+  #projects {
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--main-bg-color1);
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  }
+  
+  .project-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .project-title {
+    color: white;
+    font-family: 'Jura', sans-serif;
+    text-transform: uppercase;
+  }
+  
+  .project-img {
+    max-width: 300px;
+    border: 5px solid #eee;
+    border-radius: 4px;
+    
+  }
+  
+  .project-links {
+    list-style: none;
+    display: flex;
+    padding-right: 45px;
+  }
+  
+  .link-btn {
+    font-size: 0.75em;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid white;
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+  
+  .link-btn:hover {
+    color: #e48df7;
+    border: 1px solid #e48df7;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px #e48df7, 0px 0px 5px #e48df7 inset;
+    transition: 0.3s;
+  }
+  
+  /* Contact */
+  #contact {
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    background-color: #968b99;
+  }
+  
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    color: var(--main-bg-color2);
+    background: #ccc;
+    padding: 1em 0;
+  }
