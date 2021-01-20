@@ -245,7 +245,7 @@
   
   .profile-link:hover {
     color: #e48df7;
-    text-shadow: 0px 0px 10px white, 0px 0px 7px white;
+    text-shadow: 0px 0px 10px #e48df7;
     transition: 0.3s;
   }
   
