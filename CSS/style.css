@@ -6,7 +6,7 @@
 
 
 :root {
-    --ff-titles: 'Jura';
+    --ff-titles: 'Jura', sans-serif;
     --ff-body: helvetica, sans-serif;
     --fs-body: 16px;
     --fw-body: 300;
@@ -52,17 +52,6 @@
       text-shadow: 0px 0px 15px dodgerblue, 0px 0px 2px dodgerblue;
       text-align: center;
   }
-
-  /*
-  .section-title::after {
-    content: '';
-    display: block;
-    width: 15rem;
-    height: 2px;
-    margin: 0.5em auto 1em;
-    background: white;
-    opacity: 0.5;
-  } */
   
   /* Main Nav */
  
@@ -279,7 +268,7 @@
     min-height: 100vh;
     width: 100%;
     padding: 20px;
-    background-color: var(--main-bg-color1);
+    background: linear-gradient(60deg, rgba(54, 48, 117, 0.8) 0%, rgba(19, 16, 54, 0.8) 100%), url(/Files/img/FotisFotopoulos_coding_bg-unsplash.jpg) no-repeat top center;
   }
 
 
@@ -309,36 +298,33 @@
 }
 }
 
-/*
-.service-title::after {
-    content: '';
-    display: block;
-    width: 5rem;
-    height: 1px;
-    margin: 0.5em auto 1em;
-    background: white;
-    opacity: 0.25;
-} */
-
   /* About Section */
   
   #about {
     min-height: 100vh;
     width: 100%;
     padding: 20px;
-    background-color: var(--alt-bg-color1);
+    background: linear-gradient(60deg, rgba(54, 48, 117, 0.7) 0%, rgba(19, 16, 54, 0.7) 100%), url(/Files/img/markBrown_frozenLake202101.JPG) no-repeat center right;
   }
   
   .alt-section-box {
-    background-color: var(--alt-bg-color2);
+    /* background-color: var(--alt-bg-color2); */
     padding: 25px;
     margin: 125px 25px 100px 25px;
   }
   
   .alt-section-text {
     color: white;
-    text-align: center;
+    width: 50%;
+    text-align: left;
   }
+
+  @media (max-width: 880px) {
+    .alt-section-text {
+      width: 100%;
+      text-align: center;
+  }
+}
   
   .top-btn {
     color: gold;
@@ -361,7 +347,7 @@
     min-height: 100vh;
     width: 100%;
     padding: 20px;
-    background-color: var(--main-bg-color1);
+    background: linear-gradient(60deg, rgba(54, 48, 117, 0.8) 0%, rgba(19, 16, 54, 0.8) 100%), url(/Files/img/joshua-sortino-lightfall-unsplash.jpg) no-repeat center center;
   }
   
   .project-grid {
@@ -419,7 +405,7 @@
     min-height: 100vh;
     width: 100%;
     padding: 20px;
-    background-color: #968b99;
+    background: linear-gradient(60deg, rgba(54, 48, 117, 0.8) 0%, rgba(19, 16, 54, 0.8) 100%), url(/Files/img/taylor-vick-serverRack-unsplash.jpg) no-repeat center center;
   }
   
   
