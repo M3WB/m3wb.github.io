@@ -308,7 +308,6 @@
   }
   
   .alt-section-box {
-    /* background-color: var(--alt-bg-color2); */
     padding: 25px;
     margin: 125px 25px 100px 25px;
   }
@@ -404,10 +403,105 @@
   #contact {
     min-height: 100vh;
     width: 100%;
-    padding: 20px;
     background: linear-gradient(60deg, rgba(54, 48, 117, 0.8) 0%, rgba(19, 16, 54, 0.8) 100%), url(/Files/img/taylor-vick-serverRack-unsplash.jpg) no-repeat center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 1em;
+  box-shadow: 0px 0px 20px white;
+  background: rgb(73, 58, 73);
+  color: white;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+}
+
+button[type="submit"] {
+    width:100%;
+    background: rgb(73, 58, 73);
+    color: gold;
+    border: 1px solid gold;
+    padding: 6px;
+    border-radius: 7px;
+    transition: 0.3s;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+  
+button[type="submit"]:hover {
+    box-shadow: 0px 0px 5px gold, 0px 0px 5px gold inset;
+    text-shadow: 0px 0px 2px gold;
+    transition: 0.3s;
   }
   
+
+  #status {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 7px;
+  }
+
+  #status.success {
+    background: forestgreen;
+    border: 1px solid chartreuse;
+    box-shadow: 0px 0px 15px chartreuse, 0px 0px 5px chartreuse inset;
+    color: chartreuse;
+    animation: status 5s ease-out forwards;
+  }
+
+  #status.error {
+    background: mediumvioletred;
+    border: 1px solid magenta;
+    box-shadow: 0px 0px 15px magenta, 0px 0px 5px magenta inset;
+    color: lightpink;
+    animation: status 5s ease-out forwards;
+  }
+
+  @keyframes status {
+    0%{
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    90%{
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    100%{
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
   
   /* Footer */
   .footer {
