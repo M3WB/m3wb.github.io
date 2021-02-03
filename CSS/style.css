@@ -416,10 +416,14 @@
   margin: 0 auto;
   padding: 20px;
   border-radius: 1em;
-  box-shadow: 0px 0px 20px white;
   background: rgb(73, 58, 73);
   color: white;
   margin-bottom: 20px;
+}
+
+.container:hover {
+  box-shadow: 0px 0px 50px whitesmoke, 0px 0px 20px white;
+  transition: 750ms;
 }
 
 .form-group {
